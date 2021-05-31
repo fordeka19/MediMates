@@ -9,8 +9,8 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_settings"
+            android:id="@+id/directMessageListFragment"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Settings" />
+            android:title="Direct Messages" />
     </group>
 </menu>
