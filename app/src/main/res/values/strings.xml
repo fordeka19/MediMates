@@ -8,6 +8,17 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- Create Group -->
+    <string name="create_group_label">Create group</string>
+    <string name="create_group_name">Illness name</string>
+    <string name="create_group_hint">e.g. migraine</string>
+
+    <!-- Add People -->
+    <string name="add_people_label">Add people</string>
+
+
+    <!-- Actions -->
+    <string name="create">Create</string>
+    <string name="skip">Skip</string>
 </resources>

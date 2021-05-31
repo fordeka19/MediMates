@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.medimates.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_groupMessagingFragment"
+            app:destination="@id/groupMessagingFragment">
+            <argument
+                android:name="groupName"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.medimates.ui.createGroup.CreateGroupFragment"
+        android:label="@string/create_group_label"
+        tools:layout="@layout/fragment_create_group" >
+        <action
+            android:id="@+id/action_createGroupFragment_to_addPeopleFragment"
+            app:destination="@id/addPeopleFragment" >
+            <argument
+                android:name="groupName"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/addPeopleFragment"
+        android:name="com.medimates.ui.addPeople.AddPeopleFragment"
+        android:label="@string/add_people_label"
+        tools:layout="@layout/fragment_add_people" >
+        <action
+            android:id="@+id/action_addPeopleFragment_to_groupMessagingFragment"
+            app:destination="@id/groupMessagingFragment">
+            <argument
+                android:name="groupName"
+                app:argType="string" />
+        </action>
+        <argument
+            android:name="groupName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupMessagingFragment"
+        android:name="com.medimates.ui.messaging.GroupMessagingFragment"
+        android:label="fragment_group_messaging"
+        tools:layout="@layout/fragment_group_messaging" >
+        <argument
+            android:name="groupName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/directMessageListFragment"
+        android:name="com.medimates.ui.directMessageList.DirectMessageListFragment"
+        android:label="Direct Messages"
+        tools:layout="@layout/fragment_direct_message_list" >
+        <action
+            android:id="@+id/action_directMessageListFragment_to_directMessagingFragment"
+            app:destination="@id/directMessagingFragment">
+            <argument
+                android:name="name"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/directMessagingFragment"
+        android:name="com.medimates.ui.messaging.DirectMessagingFragment"
+        android:label="fragment_direct_messaging"
+        tools:layout="@layout/fragment_direct_messaging" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+</navigation>
