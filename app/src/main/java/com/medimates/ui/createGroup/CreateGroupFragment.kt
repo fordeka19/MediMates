@@ -49,7 +49,7 @@ class CreateGroupFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.create_group) {
             val groupName = nameEditText?.text.toString()
-            groupsSharedViewModel.group.postValue(groupName)
+            groupsSharedViewModel.groupLiveData.postValue(groupName)
             createGroupViewModel.navigateToAddPeople(groupName)
             return true
         }

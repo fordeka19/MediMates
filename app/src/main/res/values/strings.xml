@@ -17,8 +17,11 @@
     <!-- Add People -->
     <string name="add_people_label">Add people</string>
 
-
     <!-- Actions -->
     <string name="create">Create</string>
     <string name="skip">Skip</string>
+
+    <!-- Messaging -->
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
 </resources>
