@@ -34,6 +34,7 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         homeGroupsList = root.findViewById(R.id.groups_recycler_view)
         homeGroupsList?.adapter = HomeAdapter(groupsSharedViewModel.groups, homeViewModel)
+
         setupGroupsObserver()
 
         setupFabForCreateGroup(root)
@@ -59,7 +60,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupGroupsObserver() {
-        groupsSharedViewModel.group.observe(
+        groupsSharedViewModel.groupLiveData.observe(
             viewLifecycleOwner,
             { group ->
                 groupsSharedViewModel.groups.add(group)
